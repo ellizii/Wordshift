@@ -28,8 +28,8 @@ if ( ! defined( 'WPINC' ) ) {
     define( 'WPINC', 'includes' );
 }
 
-if ( ! defined( 'PUBLIC' ) ) {
-    define( 'PUBLIC', 'public' );
+if ( ! defined( 'WP_PUBLIC' ) ) {
+    define( 'WP_PUBLIC', 'public' );
 }
 
 if ( ! defined( 'WP_CONTENT_DIR' ) ) {
@@ -84,9 +84,6 @@ if ( ! defined( 'WP_PUBLIC' ) ) {
     define( 'WP_PUBLIC', ABSPATH. 'public' );
 }
 
-
-
-
 error_reporting(  E_CORE_ERROR |
                         E_CORE_WARNING |
                         E_COMPILE_ERROR |
@@ -122,12 +119,12 @@ if ( file_exists( WP_PUBLIC . 'wp-config.php' ) ) {
 	// A config file doesn't exist
 
 
-	require_once( WP_ENGINE . 'load.php' );
+	//require_once( ENGINE . 'load.php' );
 
 	// Standardize $_SERVER variables across setups.
 	wp_fix_server_vars();
 
-	require_once( WP_ENGINE . 'functions.php' );
+	//require_once( ENGINE . 'functions.php' );
 
 	$path = wp_guess_url() . '/wp-admin/setup-config.php';
 
@@ -141,7 +138,7 @@ if ( file_exists( WP_PUBLIC . 'wp-config.php' ) ) {
 		exit;
 	}
 
-	require_once( WP_INCLUDE . 'version.php' );
+	require_once( WPINC . 'version.php' );
 
 	wp_check_php_mysql_versions();
 	wp_load_translations_early();
