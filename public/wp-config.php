@@ -78,13 +78,6 @@ $table_prefix = 'wps_';
  */
 define( 'WP_DEBUG', TRUE );
 
-/* Это всё, дальше не редактируем. Успехов! */
-
-/** Абсолютный путь к директории WordPress. */
-/** Define WP_ABSPATH as this file's directory */
-//if ( ! defined( 'WP_ABSPATH' ) ) {
-   // define( 'WP_ABSPATH', dirname(dirname( __FILE__ )). '/' );
-//}
 
 /** Инициализирует переменные WordPress и подключает файлы. */
 require_once(WP_PUBLIC . 'wp-settings.php');
