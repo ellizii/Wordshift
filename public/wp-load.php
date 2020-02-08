@@ -45,7 +45,7 @@ if ( ! defined( 'ENGINE' ) ) {
 }
 
 if ( ! defined( 'THEMES' ) ) {
-    define( 'THEMES', ABSPATH. DS. WPPUBLIC .DS .'themes'. DS );
+    define( 'THEMES', ABSPATH. DS. WP_PUBLIC .DS .'themes'. DS );
 }
 
 if ( ! defined( 'JS' ) ) {
