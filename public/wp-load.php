@@ -16,64 +16,76 @@
  * @package WordPress
  */
 
+if ( ! defined( 'DS' ) ) {
+    define('DS', DIRECTORY_SEPARATOR);
+}
 
+if ( ! defined( 'ABSPATH' ) ) {
+    define( 'ABSPATH', dirname(dirname( __FILE__ )). DS);
+}
 
-/** Define WP_ABSPATH as this file's directory */
-if ( ! defined( 'WP_ABSPATH' ) ) {
-	define( 'WP_ABSPATH', dirname(dirname( __FILE__ )). '/' );
+if ( ! defined( 'WPINC' ) ) {
+    define( 'WPINC', 'includes' );
+}
+
+if ( ! defined( 'PUBLIC' ) ) {
+    define( 'PUBLIC', 'public' );
+}
+
+if ( ! defined( 'WP_CONTENT_DIR' ) ) {
+    define( 'WP_CONTENT_DIR', ABSPATH . 'content' );
+}
+
+if ( ! defined( 'CORE' ) ) {
+    define( 'CORE', 'core' );
+}
+
+if ( ! defined( 'ENGINE' ) ) {
+    define( 'ENGINE', 'engine' );
+}
+
+if ( ! defined( 'THEMES' ) ) {
+    define( 'THEMES', ABSPATH. DS. WPPUBLIC .DS .'themes'. DS );
+}
+
+if ( ! defined( 'JS' ) ) {
+    define( 'JS', 'js' );
+}
+
+if ( ! defined( 'CSS' ) ) {
+    define( 'CSS', 'css' );
+}
+
+if(!defined('WP_CONTENT_URL')) {
+    define('WP_CONTENT_URL', get_option('siteurl') . DS . 'wp-content');
+}
+
+if(!defined('WP_LANG_DIR')) {
+    define('WP_LANG_DIR', WP_CONTENT_DIR . DS . 'languages');
+}
+
+if(!defined('WP_PLUGIN_DIR')) {
+    define('WP_PLUGIN_DIR', WP_CONTENT_DIR . DS . 'plugins');
+}
+
+if(!defined('WP_PLUGIN_URL')) {
+    define('WP_PLUGIN_URL', WP_CONTENT_URL . DS . 'plugins');
+}
+
+if(!defined('WPMU_PLUGIN_DIR')) {
+    define('WPMU_PLUGIN_DIR', WP_CONTENT_DIR . DS . 'mu-plugins');
+}
+
+if(!defined('WPMU_PLUGIN_URL')) {
+    define('WPMU_PLUGIN_URL', WP_CONTENT_URL . DS . 'mu-plugins');
 }
 
 if ( ! defined( 'WP_PUBLIC' ) ) {
-    define( 'WP_PUBLIC', WP_ABSPATH. 'public/' );
+    define( 'WP_PUBLIC', ABSPATH. 'public' );
 }
 
-if ( ! defined( 'WP_INCLUDE' ) ) {
-    define( 'WP_INCLUDE', WP_ABSPATH.'includes/' );
-}
 
-if ( ! defined( 'WP_CONTENT' ) ) {
-    define( 'WP_CONTENT', WP_ABSPATH.'content/' );
-}
 
-if ( ! defined( 'WP_CORE' ) ) {
-    define( 'WP_CORE', WP_INCLUDE.'core/' );
-}
-
-if ( ! defined( 'WP_ENGINE' ) ) {
-    define( 'WP_ENGINE', WP_INCLUDE.'engine/' );
-}
-
-if ( ! defined( 'WP_THEMES' ) ) {
-    define( 'WP_THEMES', WP_ABSPATH.'public/themes/' );
-}
-
-if ( ! defined( 'WP_JS' ) ) {
-    define( 'WP_JS', WP_INCLUDE.'js/' );
-}
-
-if ( ! defined( 'WP_CSS' ) ) {
-    define( 'WP_CSS', WP_INCLUDE.'css/' );
-}
-
-if ( ! defined( 'WP_PLUGINS' ) ) {
-    define( 'WP_PLUGINS', WP_CONTENT.'plugins/' );
-}
-
-if ( ! defined( 'WP_UPLOADS' ) ) {
-    define( 'WP_UPLOADS', WP_CONTENT.'uploads/' );
-}
-
-if ( ! defined( 'WP_LANGUAGES' ) ) {
-    define( 'WP_LANGUAGES', WP_CONTENT.'languages/' );
-}
-
-if ( ! defined( 'WP_LOG' ) ) {
-    define( 'WP_LOG', WP_CONTENT.'logs/' );
-}
-
-if ( ! defined( 'WP_ADMIN' ) ) {
-    define( 'WP_ADMIN', WP_ABSPATH.'admin/' );
-}
 
 error_reporting(  E_CORE_ERROR |
                         E_CORE_WARNING |
