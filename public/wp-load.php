@@ -29,7 +29,7 @@ if ( ! defined( 'WPINC' ) ) {
 }
 
 if ( ! defined( 'WP_PUBLIC' ) ) {
-    define( 'WP_PUBLIC', 'public' );
+    define( 'WP_PUBLIC', ABSPATH. 'public' );
 }
 
 if ( ! defined( 'WP_CONTENT_DIR' ) ) {
@@ -37,11 +37,11 @@ if ( ! defined( 'WP_CONTENT_DIR' ) ) {
 }
 
 if ( ! defined( 'CORE' ) ) {
-    define( 'CORE', 'core' );
+    define( 'CORE', ABSPATH . WPINC . DS . 'core'. DS );
 }
 
 if ( ! defined( 'ENGINE' ) ) {
-    define( 'ENGINE', 'engine' );
+    define( 'ENGINE', ABSPATH . WPINC . DS . 'engine' . DS );
 }
 
 if ( ! defined( 'THEMES' ) ) {
@@ -49,15 +49,19 @@ if ( ! defined( 'THEMES' ) ) {
 }
 
 if ( ! defined( 'JS' ) ) {
-    define( 'JS', 'js' );
+    define( 'JS', ABSPATH . WPINC . DS . 'js' . DS );
 }
 
 if ( ! defined( 'CSS' ) ) {
-    define( 'CSS', 'css' );
+    define( 'CSS', ABSPATH . WPINC . DS . 'css' . DS );
+}
+
+if ( ! defined( 'WP_SITEURL' ) ) {
+    define( 'WP_SITEURL', get_option('siteurl').'/');
 }
 
 if(!defined('WP_CONTENT_URL')) {
-    define('WP_CONTENT_URL', get_option('siteurl') . DS . 'wp-content');
+    define('WP_CONTENT_URL', WP_URL . 'wp-content');
 }
 
 if(!defined('WP_LANG_DIR')) {
@@ -80,9 +84,7 @@ if(!defined('WPMU_PLUGIN_URL')) {
     define('WPMU_PLUGIN_URL', WP_CONTENT_URL . DS . 'mu-plugins');
 }
 
-if ( ! defined( 'WP_PUBLIC' ) ) {
-    define( 'WP_PUBLIC', ABSPATH. 'public' );
-}
+
 
 error_reporting(  E_CORE_ERROR |
                         E_CORE_WARNING |
