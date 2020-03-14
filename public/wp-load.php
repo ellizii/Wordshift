@@ -29,11 +29,11 @@ if ( ! defined( 'WPINC' ) ) {
 }
 
 if ( ! defined( 'WP_PUBLIC' ) ) {
-    define( 'WP_PUBLIC', ABSPATH. 'public' );
+    define( 'WP_PUBLIC', ABSPATH. 'public' . DS );
 }
 
 if ( ! defined( 'WP_CONTENT_DIR' ) ) {
-    define( 'WP_CONTENT_DIR', ABSPATH . 'content' );
+    define( 'WP_CONTENT_DIR', ABSPATH . 'content'. DS);
 }
 
 if ( ! defined( 'CORE' ) ) {
