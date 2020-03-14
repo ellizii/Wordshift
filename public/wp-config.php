@@ -76,8 +76,9 @@ $table_prefix = 'wps_';
  *
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
-define( 'WP_DEBUG', TRUE );
-
+if ( ! defined( 'WP_DEBUG' ) ) {
+    define('WP_DEBUG', TRUE);
+}
 
 /** Инициализирует переменные WordPress и подключает файлы. */
 require_once(WP_PUBLIC . 'wp-settings.php');
