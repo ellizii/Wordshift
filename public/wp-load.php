@@ -84,6 +84,10 @@ if(!defined('WPMU_PLUGIN_URL')) {
     define('WPMU_PLUGIN_URL', WP_CONTENT_URL . DS . 'mu-plugins');
 }
 
+if(!defined('LOGS')) {
+    define('LOGS', WP_CONTENT_DIR . 'logs' . DS);
+}
+
 
 
 error_reporting(  E_CORE_ERROR |
